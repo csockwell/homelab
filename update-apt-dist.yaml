@@ -1,5 +1,5 @@
 ---
-- name: Ansible apt module
+ - name: Ansible apt module
    hosts: all
    become: true
    
