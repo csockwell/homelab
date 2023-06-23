@@ -6,7 +6,6 @@
     - name: update dist packages
       apt:
         name: "*"
-        state: latest
         update_cache: yes
         upgrade: dist
         
