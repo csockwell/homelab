@@ -5,5 +5,11 @@
   tasks:
     - name: update dist packages
       apt:
+        name: "*"
+        state: latest
         update_cache: yes
         upgrade: dist
+        
+    - name: Display the last line of the previous task to check the stats
+      debug:
+        msg:  "{{updatesys.stdout_lines|last}}"
