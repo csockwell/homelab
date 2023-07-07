@@ -3,9 +3,9 @@
    hosts: all
    become: true
    tasks: 
-    - name: Ansible Update Cache and Upgrade all Packages
-      ansible.builtin.apt:
-      upgrade: dist
+- name: Upgrade the OS (apt-get dist-upgrade)
+  ansible.builtin.apt:
+    upgrade: dist
 
     - name: Display the last line of the previous task to check the stats
       debug:
